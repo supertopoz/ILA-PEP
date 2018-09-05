@@ -4,14 +4,18 @@ const mathReducer = (state = {
 }, action) => {
     switch (action.type) {
         case "ADD":
-            return Object.assign({}, state, { 
+            state = {
+                ...state, 
                 result: state.result + action.payload,
-            });
+                lastValues: [...state.lastValues, action.payload]
+            }
             break;
         case "SUBTRACT":
-            return Object.assign({}, state, { 
+            state = {
+                ...state, 
                 result: state.result - action.payload,
-            });
+                lastValues: [...state.lastValues, action.payload]
+            }
             break;
     }
     return state;
