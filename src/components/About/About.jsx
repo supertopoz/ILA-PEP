@@ -5,7 +5,7 @@ export const About = (props) => {
     return (
         <div>
                 <div className="col-xs-12">
-                    <h1>The Main Page</h1>
+                    <h1>Info Page</h1>
                 </div>
             <div>
                 <div>

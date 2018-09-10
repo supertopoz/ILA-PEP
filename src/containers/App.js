@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import {connect} from "react-redux";
 
 import { User } from "../components/User";
-import { About } from "../components/About";
+import { Home } from "../components/Home/Home";
+import { About } from "../components/About/About";
+import  Header from "../components/Header/Header";
+import LoadingBar from "../components/LoadingBar/LoadingBar";
 import { setName } from "../actions/userActions";
 import {
   BrowserRouter as Router,
@@ -12,27 +15,22 @@ import {
 
 
 class App extends React.Component {
-
 		render() {
 			return (
-		    <Router>
-
 			<div>
-			<ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            </ul>
-            <hr/>
-			    <Route path="/about" 
-			    	render={()=> {
-			    	 return(
-			    	 	<About changeUsername={() => this.props.setName("Anna")}/>
-			    	 )
-			    	}} 
-			    />
-				<User username={this.props.user.name}/>
+			
+			<Header/>
+			<LoadingBar/>
+            <Route path="/home" component={Home}></Route>
+		    <Route path="/about" 
+		    	render={()=> {
+		    	 return(
+		    	 	<About changeUsername={() => this.props.setName("Anna")}/>
+		    	 )
+		    	}} 
+		    />
+			<User username={this.props.user.name}/>
 			</div>
-			</Router>
 			);
 		}
 }
@@ -46,8 +44,7 @@ class App extends React.Component {
 
 		const mapDispatchToProps = (dispatch) => {
 			return {
-				setName: (name) => { dispatch(setName(name)) },
-				
+				setName: (name) => { dispatch(setName(name)) },				
 		};
 };
 

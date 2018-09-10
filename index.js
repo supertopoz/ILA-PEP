@@ -1,22 +1,26 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore, combineReducers, applyMiddleware} from "redux";
-import { Provider } from "react-redux";
 import store from "./store";
+import { Provider } from "react-redux";
+import PropTypes from 'prop-types'
 import App from './src/containers/App';
 import './src/containers/index.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 
+const Root = ({store}) => (
+	    <Provider store={store} >	
+	    <Router>
+	      <Route path="/" component={App}></Route>	     
+	    </Router>
+	    </Provider>
+)
 
+Root.propTypes = {
+	store: PropTypes.object.isRequired
+}
 
-const myLogger = (store) => (next) => (action) => {
-    console.log("Logged Action: ", action);
-    next(action);
-};
-
-store.subscribe(() => {
-    console.log("Store updated!", store.getState());
-});
-
-
-
-render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
+render(<Root store={store}/>, document.getElementById('root'));
