@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
+import {NotificationContainer} from 'react-notifications';
 
+import 'react-notifications/lib/notifications.css';
 import { User } from "../components/User";
 import { Home } from "../components/Home/Home";
 import { About } from "../components/About/About";
@@ -30,6 +32,7 @@ class App extends React.Component {
 		    	}} 
 		    />
 			<User username={this.props.user.name}/>
+			<NotificationContainer/>
 			</div>
 			);
 		}

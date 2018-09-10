@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import styled from "styled-components"
-
+import { NotificationManager} from 'react-notifications';
 import { addStudentId } from "../../actions/studentDetailsAction";
 import { showLoadingBar } from "../../actions/pageAnimations";
 
@@ -35,7 +35,9 @@ class Search extends React.Component {
           this.props.addStudentId(e.target.value) 
           this.props.showLoadingBar(true);
           e.target.value = '';
-          document.activeElement.blur()
+          document.activeElement.blur();
+          NotificationManager.error('Student not found', 'Error!')
+
         }}} 
         name="passwordInput" 
         placeholder="Add a student code" 
