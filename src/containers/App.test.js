@@ -13,6 +13,6 @@ import App from './App';
 describe('App', () => {
   const app = shallow(<Provider store={store}><App /></Provider>);
   it('renders the title', () => {
-    expect('a').toBe('a');
+    expect(app).toMatchSnapshot();
   });
 });

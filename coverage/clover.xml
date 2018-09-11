@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1536630971329" clover="3.2.0">
+  <project timestamp="1536630971329" name="All files">
+    <metrics statements="34" coveredstatements="12" conditionals="10" coveredconditionals="3" methods="12" coveredmethods="3" elements="56" coveredelements="18" complexity="0" loc="34" ncloc="34" packages="4" files="7" classes="7">
+      <package name="ILA-PEP">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="store.js" path="C:\Users\Jason\Desktop\ilavpepv4\ILA-PEP\store.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+      </package>
+      <package name="ILA-PEP.src.actions">
+        <metrics statements="2" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <file name="pageAnimations.js" path="C:\Users\Jason\Desktop\ilavpepv4\ILA-PEP\src\actions\pageAnimations.js">
+          <metrics statements="1" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+        </file>
+        <file name="studentDetailsAction.js" path="C:\Users\Jason\Desktop\ilavpepv4\ILA-PEP\src\actions\studentDetailsAction.js">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="ILA-PEP.src.components.Search">
+        <metrics statements="15" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <file name="Search.jsx" path="C:\Users\Jason\Desktop\ilavpepv4\ILA-PEP\src\components\Search\Search.jsx">
+          <metrics statements="15" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="0"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="51" count="1" type="stmt"/>
+          <line num="52" count="0" type="stmt"/>
+          <line num="58" count="1" type="stmt"/>
+          <line num="59" count="0" type="stmt"/>
+          <line num="60" count="0" type="stmt"/>
+          <line num="61" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="ILA-PEP.src.reducers">
+        <metrics statements="17" coveredstatements="9" conditionals="7" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <file name="pageAnimations.js" path="C:\Users\Jason\Desktop\ilavpepv4\ILA-PEP\src\reducers\pageAnimations.js">
+          <metrics statements="5" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
+          <line num="5" count="3" type="cond" truecount="0" falsecount="1"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="14" count="3" type="stmt"/>
+        </file>
+        <file name="studentDetailsReducer.js" path="C:\Users\Jason\Desktop\ilavpepv4\ILA-PEP\src\reducers\studentDetailsReducer.js">
+          <metrics statements="5" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
+          <line num="5" count="3" type="cond" truecount="0" falsecount="1"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="14" count="3" type="stmt"/>
+        </file>
+        <file name="userReducer.js" path="C:\Users\Jason\Desktop\ilavpepv4\ILA-PEP\src\reducers\userReducer.js">
+          <metrics statements="7" coveredstatements="3" conditionals="3" coveredconditionals="1" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
+          <line num="5" count="3" type="cond" truecount="0" falsecount="2"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="15" count="0" type="stmt"/>
+          <line num="17" count="3" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

@@ -1,16 +1,9 @@
 import React from "react";
 import {connect} from "react-redux";
 import styled from "styled-components"
-
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 import  Search from '../Search/Search';
-
-
 
 const FixedHeader = styled.div`
   display: grid;
@@ -47,7 +40,7 @@ class Header extends React.Component {
     render(){
     return (
         <FixedHeader>
-          { console.log(this.props)}
+          { console.log('These are props for the header:', this.props)}
           <Menu><i className="material-icons">menu</i></Menu>                
           <Link to="/home"><Logo src={logoImg}/></Link>
           <Search />

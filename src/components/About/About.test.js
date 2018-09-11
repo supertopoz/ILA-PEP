@@ -3,13 +3,13 @@ import { configure, render } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
 
-import { Main } from './Main';
+import { About } from './About';
 
-describe('Main', () => {
+describe('About', () => {
   test('is rendered', () => {
  
    const component = render(
-     <Main/>
+     <About/>
     );
     expect(component)
       .toMatchSnapshot();

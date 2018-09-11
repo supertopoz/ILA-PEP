@@ -3,11 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+
+ "jest": {
+  "moduleNameMapper": {
+    "\\.(css|jpg|png)$": "<rootDir>/empty-module.js"
+  }
+  },
+
+
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.js",
-    "test": "jest --watch"
+    "test": "jest --coverage --watch"
   },
+
+  
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -19,6 +29,7 @@
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.5.3",
     "styled-components": "^3.4.5"
   },
   "devDependencies": {

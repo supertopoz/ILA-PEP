@@ -1,7 +1,6 @@
 import React from "react";
 
 export const About = (props) => {
-    console.log(props)
     return (
         <div>
                 <div className="col-xs-12">
