@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">58.33% </span>
+        <span class="strong">46.67% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>7/12</span>
+        <span class='fraction'>7/15</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,19 +32,19 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/5</span>
+        <span class='fraction'>0/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">58.33% </span>
+        <span class="strong">46.67% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>7/12</span>
+        <span class='fraction'>7/15</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -116,7 +116,12 @@
 <a name='L68'></a><a href='#L68'>68</a>
 <a name='L69'></a><a href='#L69'>69</a>
 <a name='L70'></a><a href='#L70'>70</a>
-<a name='L71'></a><a href='#L71'>71</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -155,9 +160,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -178,10 +184,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -189,10 +197,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
 import {connect} from "react-redux";
 import styled from "styled-components"
+&nbsp;
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 &nbsp;
 import  Search from '../Search/Search';
-&nbsp;
+import { showSideMenu } from "../../actions/pageAnimations";
 const FixedHeader = styled.div`
   display: grid;
   grid-gap:10px;
@@ -224,10 +233,11 @@ class Header extends React.Component {
 <span class="cstat-no" title="statement not covered" >      super(props)</span>
     }
 <span class="fstat-no" title="function not covered" >    re</span>nder(){
+<span class="cstat-no" title="statement not covered" >      console.log('header props', this.props)</span>
 <span class="cstat-no" title="statement not covered" >    return (</span>
         &lt;FixedHeader&gt;
           { console.log('These are props for the header:', this.props)}
-          &lt;Menu&gt;&lt;i className="material-icons"&gt;menu&lt;/i&gt;&lt;/Menu&gt;                
+          &lt;Menu onClick={<span class="fstat-no" title="function not covered" >()</span>=&gt; <span class="cstat-no" title="statement not covered" >this.props.showSideMenu(true)}</span>&gt;&lt;i className="material-icons"&gt;menu&lt;/i&gt;&lt;/Menu&gt;                
           &lt;Link to="/home"&gt;&lt;Logo src={logoImg}/&gt;&lt;/Link&gt;
           &lt;Search /&gt;
           &lt;div&gt;&lt;/div&gt;
@@ -244,14 +254,16 @@ class Header extends React.Component {
 &nbsp;
     const mapStateToProps = <span class="fstat-no" title="function not covered" >(s</span>tate) =&gt; {
 <span class="cstat-no" title="statement not covered" >      return {</span>
-        student: state.student
+        student: state.student,
+        sideMenu: state.pageAnimations.sideMenu
+&nbsp;
       };
     };
 &nbsp;
     const mapDispatchToProps = <span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; {
 <span class="cstat-no" title="statement not covered" >      return {</span>
-        addStudentId: <span class="fstat-no" title="function not covered" >(i</span>d) =&gt; { <span class="cstat-no" title="statement not covered" >dispatch(addStudentId(id)) </span>},
-        
+        addStudentId: <span class="fstat-no" title="function not covered" >(i</span>d) =&gt; { <span class="cstat-no" title="statement not covered" >dispatch(addStudentId(id))}</span>,
+        showSideMenu: <span class="fstat-no" title="function not covered" >(v</span>isibility) =&gt; { <span class="cstat-no" title="statement not covered" >dispatch(showSideMenu(visibility))}   </span>
     };
   }
 &nbsp;
@@ -262,7 +274,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(Header)
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Sep 13 2018 12:03:40 GMT+0900 (Korea Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Sep 19 2018 05:51:24 GMT+0900 (Korea Standard Time)
 </div>
 </div>
 <script src="..\..\..\..\prettify.js"></script>

@@ -9,8 +9,6 @@
     "\\.(css|jpg|png)$": "<rootDir>/empty-module.js"
   }
   },
-
-
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.js",
